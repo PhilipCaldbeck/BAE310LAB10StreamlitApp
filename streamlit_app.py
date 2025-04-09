@@ -8,10 +8,10 @@ from shapely.geometry import Point
 import folium
 from folium.plugins import MarkerCluster
 
-# Load datasets
-@st.cache
+# Load datasets using Streamlit's caching function (updated for Streamlit 1.36+)
+@st.cache_data
 def load_datasets():
-    # Assuming CSV format for the databases
+    # Correct paths for the CSV files (both are in the same directory as the script)
     db1 = pd.read_csv("station.csv")  # Database for Part 1
     db2 = pd.read_csv("narrowresult.csv")  # Database for Part 2
     return db1, db2
@@ -92,4 +92,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
