@@ -12,8 +12,8 @@ from folium.plugins import MarkerCluster
 @st.cache
 def load_datasets():
     # Assuming CSV format for the databases
-    db1 = pd.read_csv("path_to_database1.csv")  # Database for Part 1
-    db2 = pd.read_csv("path_to_database2.csv")  # Database for Part 2
+    db1 = pd.read_csv("station.csv")  # Database for Part 1
+    db2 = pd.read_csv("narrowresult.csv")  # Database for Part 2
     return db1, db2
 
 # Function to create the map
